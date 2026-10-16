@@ -1,108 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Srishti Enterprises provides civil, mechanical, industrial contracting, painting, sand blasting and manpower supply services.">
-  <title>SRISHTI ENTERPRISES | Industrial & Engineering Contractors</title>
-  <style>
-    :root{--navy:#0b2340;--blue:#1268b3;--sky:#eaf4fc;--ink:#182b40;--muted:#607185;--white:#fff;--line:#dbe5ef;--orange:#f3a52d}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-    .top{background:var(--navy);color:#e9f3ff;font-size:13px;padding:8px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    header{background:white;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px;color:var(--navy)}.logo{width:46px;height:46px;border-radius:10px;background:var(--blue);display:grid;place-items:center;color:white;font-weight:900;font-size:19px;box-shadow:inset 0 -4px 0 #084a84}.brand small{display:block;color:var(--muted);font-weight:600;font-size:10px;letter-spacing:1.5px}
-    nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}nav a:hover{color:var(--blue)}.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--blue);color:white;padding:12px 18px;border-radius:6px;font-weight:700;border:0;cursor:pointer}.btn:hover{background:#0b5594}.btn.outline{background:transparent;border:1px solid #b7d3ec;color:white}.btn.light{background:white;color:var(--navy)}
-    .hero{background:linear-gradient(112deg,rgba(7,27,51,.97),rgba(12,68,117,.83)),url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:94px 0 86px}
-    .eyebrow{color:#93d0ff;font-size:12px;letter-spacing:2.5px;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.1;max-width:760px;margin:16px 0}.hero p{font-size:18px;color:#dceaf7;max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:42px;color:#e4f0fb;font-size:13px}.trust span:before{content:'✓';color:#79d3ff;font-weight:900;margin-right:8px}
-    section{padding:76px 0}.section-head{max-width:720px;margin-bottom:34px}.section-head .eyebrow{color:var(--blue)}h2{font-size:clamp(27px,3.3vw,38px);line-height:1.2;color:var(--navy);margin:9px 0 14px}.section-head p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:25px;border:1px solid var(--line);border-radius:10px;background:white;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0b234012;border-color:#a8c9e7}.ico{width:48px;height:48px;border-radius:10px;background:var(--sky);display:grid;place-items:center;color:var(--blue);font-size:24px;margin-bottom:16px}.service h3{color:var(--navy);margin:0 0 8px;font-size:19px}.service p{margin:0;color:var(--muted);font-size:14px}
-    .about{background:#f5f9fd}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}.photo{min-height:370px;border-radius:14px;background:linear-gradient(0deg,#0b23404d,#0b234400),url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1100&q=85') center/cover;position:relative}.photo-label{position:absolute;bottom:20px;left:20px;right:20px;padding:18px;background:#fff;color:var(--navy);border-radius:8px;font-weight:800}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.checks span{font-weight:700;font-size:14px}.checks span:before{content:'✓';color:var(--blue);margin-right:8px}
-    .band{background:var(--navy);color:white;padding:42px 0}.band-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.band h2{color:white;margin:0 0 8px}.band p{margin:0;color:#d5e3f2}
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{border-top:3px solid var(--blue);padding:18px 4px}.num{font-size:12px;letter-spacing:2px;color:var(--blue);font-weight:900}.step h3{margin:8px 0;color:var(--navy)}.step p{margin:0;color:var(--muted);font-size:14px}
-    .contact{background:#f5f9fd}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px}.contact-card,.form-card{background:white;border:1px solid var(--line);border-radius:12px;padding:28px}.contact-row{padding:14px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}.contact-row small{display:block;color:var(--muted)}.contact-row strong{overflow-wrap:anywhere}
-    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:13px;font-weight:700;color:var(--navy)}input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #cbd8e5;border-radius:6px;font:inherit;background:white;color:var(--ink)}textarea{min-height:110px;resize:vertical}.full{grid-column:1/-1}.notice{font-size:12px;color:var(--muted);margin-top:12px}
-    footer{background:#071a30;color:#d6e4f2;padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.foot strong{color:white}
-    .lang{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:1px}
-    @media(max-width:850px){nav{gap:12px}nav a:not(.btn){display:none}.grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr}.photo{min-height:300px}.process{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.top .wrap{font-size:12px}.nav{min-height:68px}.brand{font-size:13px}.logo{width:40px;height:40px}.nav .btn{padding:10px;font-size:12px}.hero{padding:68px 0}.hero p{font-size:16px}section{padding:55px 0}.grid,.process{grid-template-columns:1fr}.checks{grid-template-columns:1fr}.contact-card,.form-card{padding:20px}form{grid-template-columns:1fr}.full{grid-column:auto}}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SRISHTI ENTERPRISES: civil, mechanical, industrial painting, sand blasting and manpower supply services in India.">
+<meta name="theme-color" content="#123b63">
+<title>SRISHTI ENTERPRISES | Industrial & Civil Contracting</title>
+<style>
+:root{--navy:#123b63;--blue:#1769aa;--pale:#eaf4fb;--orange:#f29b38;--ink:#172b3a;--muted:#5d6d7b;--line:#dce6ee;--soft:#f5f8fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 Arial,Helvetica,sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+.top{background:#0d2944;color:#eaf4fb;font-size:13px;padding:8px 0}.top .wrap,.nav,.foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:5;background:white;border-bottom:1px solid var(--line)}.nav{min-height:76px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--navy);font-weight:900;line-height:1.15;letter-spacing:.4px}.logo{background:var(--navy);color:white;border-bottom:4px solid var(--orange);border-radius:9px;width:45px;height:45px;display:grid;place-items:center}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.4px;margin-top:5px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:bold}nav a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--orange);color:#142b3b;padding:12px 18px;border-radius:7px;font-weight:800;border:0;cursor:pointer}.blue{background:var(--blue);color:white}.outline{background:transparent;border:1px solid #ffffff8c;color:white}
+.hero{background:linear-gradient(115deg,#0e2c49,#164e7a 65%,#2875a9);color:white;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:76px 0}
+.kicker{font-size:12px;color:var(--blue);font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero .kicker{color:#ffd59e}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1.3px;margin:12px 0 18px}.hero p{color:#e2edf5;font-size:17px;margin-bottom:25px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:#ffffff12;border:1px solid #ffffff30;border-radius:15px;padding:25px}.panel small{color:#c9e2f3;letter-spacing:1.3px;font-weight:bold}.panel h2{color:white;font-size:24px;margin:8px 0 14px}.check{padding:12px 0;border-top:1px solid #ffffff30;color:#edf6fc}.check b{display:block}
+.strip{background:var(--pale);border-bottom:1px solid var(--line)}.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:19px 0}.strip strong{font-size:14px;color:var(--navy)}
+section{padding:72px 0}.intro{max-width:700px;margin-bottom:30px}h2{font-size:clamp(28px,3.5vw,40px);line-height:1.16;color:var(--navy);margin:9px 0 13px;letter-spacing:-.5px}.intro p,.muted{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 8px 25px #123b6308}.card:hover{border-color:#b8d4e8;transform:translateY(-3px)}.ico{width:46px;height:46px;display:grid;place-items:center;background:var(--pale);border-radius:10px;font-size:23px;margin-bottom:13px}.card h3{color:var(--navy);margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}
+.about{background:var(--soft)}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:center}.visual{min-height:310px;border-radius:16px;padding:28px;background:linear-gradient(145deg,#103554,#216fa4);color:white;display:flex;flex-direction:column;justify-content:space-between}.visual .big{font-size:64px;font-weight:900;color:#ffd59e;line-height:1}.visual p,.about-copy p{color:var(--muted)}.visual p{color:#dcebf6}.ticks{padding:0;list-style:none}.ticks li{margin:9px 0}.ticks b{color:var(--blue);margin-right:8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;background:var(--soft);border-left:3px solid var(--orange);border-radius:0 9px 9px 0}.step small{font-weight:900;color:var(--blue)}.step h3{color:var(--navy);margin:7px 0}.step p{color:var(--muted);font-size:14px;margin:0}
+.cta{background:var(--navy);color:white;padding:38px 0}.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{color:white;margin:0 0 6px;font-size:29px}.cta p{margin:0;color:#d7e6f2}
+.contact{background:var(--soft)}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px}.contact-box,.form-box{background:white;border:1px solid var(--line);border-radius:12px;padding:26px}.contact-box h3,.form-box h3{color:var(--navy);margin-top:0}.row{padding:13px 0;border-top:1px solid var(--line)}.row small{display:block;color:var(--muted);font-weight:bold}.row a{color:var(--blue);font-weight:bold;overflow-wrap:anywhere}
+label{display:block;font-weight:bold;font-size:13px;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #cbd8e2;border-radius:7px;font:inherit;font-size:14px}textarea{min-height:100px;resize:vertical}.note{font-size:12px;color:var(--muted)}footer{background:#0b2238;color:#d7e5f0;padding:25px 0;font-size:13px}
+@media(max-width:850px){nav{gap:12px}.nav>.btn{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.strip .wrap{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){nav{display:none}.hero-grid{padding:48px 0}.hero p{font-size:15px}.actions .btn{width:100%;text-align:center}.cards,.steps{grid-template-columns:1fr}section{padding:53px 0}.cta .wrap{align-items:flex-start;flex-direction:column}.contact-box,.form-box{padding:20px}.brand{font-size:13px}.brand small{font-size:9px}}
+</style>
 </head>
 <body>
-  <div class="top"><div class="wrap"><span>Industrial • Civil • Mechanical Contracting</span><span>Rawatbhata, Rajasthan · Serving clients across India</span></div></div>
-  <header><div class="wrap nav">
-    <a class="brand" href="#home"><span class="logo">SE</span><span>SRISHTI ENTERPRISES<small>ENGINEERING • CONTRACTING • SERVICES</small></span></a>
-    <nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a class="btn" href="#contact">Request a Quote</a></nav>
-  </div></header>
-  <main>
-    <section class="hero" id="home"><div class="wrap">
-      <div class="eyebrow">Reliable Industrial Solutions</div>
-      <h1>Built on Trust.<br>Driven by Quality.</h1>
-      <p>Professional contracting support for civil works, mechanical works, industrial painting, sand blasting and manpower supply.</p>
-      <p lang="hi">सिविल, मैकेनिकल, इंडस्ट्रियल पेंटिंग, सैंड ब्लास्टिंग और मैनपावर सप्लाई के लिए भरोसेमंद कॉन्ट्रैक्टिंग सेवाएँ।</p>
-      <div class="actions"><a class="btn light" href="#services">Explore Our Services</a><a class="btn outline" href="#contact">Discuss Your Project</a></div>
-      <div class="trust"><span>Safety-focused approach</span><span>Professional coordination</span><span>Project-oriented service</span></div>
-    </div></section>
-    <section id="services"><div class="wrap">
-      <div class="section-head"><div class="eyebrow">What We Do</div><h2>Services for Industry & Infrastructure</h2><p>Flexible contracting services designed around project requirements, site coordination and dependable execution.</p></div>
-      <div class="grid">
-        <article class="service"><div class="ico">⌂</div><h3>Civil Works</h3><p>General civil construction, repair, plastering, finishing and site-support activities as per project scope.</p></article>
-        <article class="service"><div class="ico">⚙</div><h3>Mechanical Works</h3><p>Mechanical project support, industrial maintenance coordination and associated site work based on requirements.</p></article>
-        <article class="service"><div class="ico">▧</div><h3>Industrial Contracts</h3><p>Contracting support for industrial facilities, shutdown activities and project-based work packages.</p></article>
-        <article class="service"><div class="ico">▤</div><h3>Painting & Coating</h3><p>Industrial and structural painting services with surface preparation and finish-work coordination.</p></article>
-        <article class="service"><div class="ico">✧</div><h3>Sand Blasting</h3><p>Surface preparation and abrasive blasting support for industrial and structural applications.</p></article>
-        <article class="service"><div class="ico">♙</div><h3>Manpower Supply</h3><p>Manpower support for eligible civil, mechanical, painting and industrial project requirements.</p></article>
-      </div>
-    </div></section>
-    <section class="about" id="about"><div class="wrap about-grid">
-      <div class="photo"><div class="photo-label">Practical support. Professional coordination.</div></div>
-      <div><div class="eyebrow">About Our Company</div><h2>A dependable contracting partner for your projects.</h2>
-        <p class="muted">SRISHTI ENTERPRISES is focused on supporting civil, mechanical and industrial project requirements with a practical, service-oriented approach. We work to understand each client's scope, timelines and site needs before planning execution.</p>
-        <p class="muted" lang="hi">हमारा उद्देश्य है—काम की आवश्यकता को समझना, बेहतर समन्वय रखना और प्रोजेक्ट की ज़रूरत के अनुसार भरोसेमंद सेवाएँ देना।</p>
-        <div class="checks"><span>Clear communication</span><span>Scope-based planning</span><span>Site coordination</span><span>Client-focused service</span></div>
-        <a class="btn" href="#contact">Talk to Our Team</a>
-      </div>
-    </div></section>
-    <section><div class="wrap"><div class="section-head"><div class="eyebrow">How We Work</div><h2>A straightforward project process</h2><p>From initial enquiry to work planning, we aim to keep communication clear at every stage.</p></div>
-      <div class="process">
-        <div class="step"><div class="num">STEP 01</div><h3>Understand</h3><p>Discuss scope, location, timelines and technical requirements.</p></div>
-        <div class="step"><div class="num">STEP 02</div><h3>Plan</h3><p>Review the work package and align resources to the agreed scope.</p></div>
-        <div class="step"><div class="num">STEP 03</div><h3>Coordinate</h3><p>Coordinate site activities, communication and project needs.</p></div>
-        <div class="step"><div class="num">STEP 04</div><h3>Deliver</h3><p>Work toward agreed requirements and client expectations.</p></div>
-      </div>
-    </div></section>
-    <div class="band"><div class="wrap band-inner"><div><h2>Have a project in mind?</h2><p>Share your scope of work and let’s discuss the next steps.</p></div><a class="btn light" href="#contact">Request a Call Back</a></div></div>
-    <section class="contact" id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Contact Us</div><h2>Let’s discuss your requirement.</h2><p>For civil, mechanical, industrial contracting, painting, blasting or manpower enquiries, contact us using the details below.</p></div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-row"><small>Company</small><strong>SRISHTI ENTERPRISES</strong></div>
-          <div class="contact-row"><small>Phone / WhatsApp</small><strong><a href="tel:+917615020584">+91 76150 20584</a></strong></div>
-          <div class="contact-row"><small>Email</small><strong><a href="mailto:srishtienterprisesrbt@gmail.com">srishtienterprisesrbt@gmail.com</a></strong></div>
-          <div class="contact-row"><small>Location</small><strong>Rawatbhata, Rajasthan, India</strong></div>
-          <p class="notice">Please confirm these public contact details before publishing the website.</p>
-        </div>
-        <div class="form-card"><h3 style="margin-top:0;color:var(--navy)">Send an enquiry</h3>
-          <form id="enquiry">
-            <label>Name<input name="name" required placeholder="Your full name"></label>
-            <label>Company<input name="company" placeholder="Company name"></label>
-            <label>Phone<input name="phone" required type="tel" placeholder="Contact number"></label>
-            <label>Service needed<select name="service"><option>Civil Works</option><option>Mechanical Works</option><option>Industrial Contracts</option><option>Painting & Coating</option><option>Sand Blasting</option><option>Manpower Supply</option><option>Other</option></select></label>
-            <label class="full">Project details<textarea name="details" placeholder="Briefly describe your project and location"></textarea></label>
-            <button class="btn full" type="submit">Send Enquiry on WhatsApp</button>
-          </form>
-          <p class="notice">This form opens WhatsApp with your message. It does not store submissions on a server.</p>
-        </div>
-      </div>
-    </div></section>
-  </main>
-  <footer><div class="wrap foot"><span><strong>SRISHTI ENTERPRISES</strong> · Industrial & Engineering Contractors</span><span>© <span id="year"></span> Srishti Enterprises. All rights reserved.</span></div></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('enquiry').addEventListener('submit', function(e){
-      e.preventDefault();
-      const d = new FormData(e.currentTarget);
-      const message = `Hello SRISHTI ENTERPRISES,%0A%0AName: ${encodeURIComponent(d.get('name'))}%0ACompany: ${encodeURIComponent(d.get('company') || 'Not provided')}%0APhone: ${encodeURIComponent(d.get('phone'))}%0AService: ${encodeURIComponent(d.get('service'))}%0AProject details: ${encodeURIComponent(d.get('details') || 'Not provided')}`;
-      window.open('https://wa.me/917615020584?text=' + message, '_blank', 'noopener');
-    });
-  </script>
-</body>
-</html>
+<div class="top"><div class="wrap"><span>Industrial • Civil • Mechanical Contracting</span><span>Rawatbhata, Rajasthan · Serving enquiries across India</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">SE</span><span>SRISHTI ENTERPRISES<small>ENGINEERING · INDUSTRIAL · CONTRACTING</small></span></a>
+<nav><a href="#services">Services</a><a href="#about">About Us</a><a href="#process">Our Process</a><a href="#contact">Contact</a></nav>
+<a class="btn blue" href="#contact">Contact / संपर्क करें</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<span class="kicker">Reliable work. Responsible service.</span><h1>Industrial Solutions.<br>Built on Trust.</h1>
+<p>SRISHTI ENTERPRISES civil, mechanical aur industrial projects ke liye dependable contracting services provide karne ka lakshya rakhta hai. Quality, safety aur timely coordination par hamara focus hai.</p>
+<div class="actions"><a class="btn" href="#services">Explore Services / सेवाएँ देखें</a><a class="btn outline" href="#contact">Request Enquiry / पूछताछ करें</a></div>
+</div><div class="panel"><small>OUR SERVICE CAPABILITIES / हमारी सेवाएँ</small><h2>One contact. Multiple site needs.</h2>
+<div class="check"><b>Civil & Construction</b>सिविल और निर्माण कार्य</div><div class="check"><b>Industrial Painting & Sand Blasting</b>इंडस्ट्रियल पेंटिंग और सैंड ब्लास्टिंग</div><div class="check"><b>Mechanical Work & Manpower Supply</b>मैकेनिकल कार्य और मैनपावर सप्लाई</div></div></div></section>
+<div class="strip"><div class="wrap"><strong>⌂ Site-focused service<br><span class="muted">साइट की जरूरत के अनुसार</span></strong><strong>⚙ Industrial work<br><span class="muted">इंडस्ट्रियल कार्य</span></strong><strong>✓ Quality-conscious<br><span class="muted">गुणवत्ता पर ध्यान</span></strong><strong>↗ Pan-India enquiries<br><span class="muted">पूरे भारत से पूछताछ</span></strong></div></div>
+<section id="services"><div class="wrap"><div class="intro"><span class="kicker">What we do / हमारी सेवाएँ</span><h2>Services for civil and industrial projects</h2><p>Project requirement ke hisaab se scope aur availability discuss karne ke liye humse sampark karein.</p></div>
+<div class="cards">
+<article class="card"><div class="ico">🏗️</div><h3>Civil & Construction Works</h3><p>सिविल निर्माण, मरम्मत, प्लास्टर और संबंधित साइट कार्यों के लिए कॉन्ट्रैक्टिंग सहायता।</p></article>
+<article class="card"><div class="ico">🎨</div><h3>Industrial Painting</h3><p>Industrial aur commercial sites ke liye painting work coordination and execution support.</p></article>
+<article class="card"><div class="ico">⚙️</div><h3>Sand Blasting & Surface Preparation</h3><p>Surface preparation aur sand blasting requirements ke liye project-based service support.</p></article>
+<article class="card"><div class="ico">🔩</div><h3>Mechanical Works</h3><p>Mechanical and plant-related contract requirements par scope ke anusaar kaam.</p></article>
+<article class="card"><div class="ico">👷</div><h3>Manpower Supply</h3><p>Site requirements ke liye manpower supply coordination, agreed scope and compliance ke subject to.</p></article>
+<article class="card"><div class="ico">🧰</div><h3>Industrial Contracting</h3><p>Multiple site services ke liye coordinated contracting support aur requirement-based planning.</p></article>
+</div></div></section>
+<section class="about" id="about"><div class="wrap about-grid"><div class="visual"><strong>SRISHTI ENTERPRISES</strong><div><div class="big">SE</div><p>Civil · Mechanical · Painting · Blasting · Manpower</p></div></div>
+<div class="about-copy"><span class="kicker">About us / हमारे बारे में</span><h2>Practical contracting support, with a professional approach.</h2>
+<p>SRISHTI ENTERPRISES Rajasthan ke Rawatbhata se operate karta hai aur India bhar se project enquiries welcome karta hai. Hum client ki requirement, site conditions, safety expectations aur agreed scope ko samajhkar kaam plan karne par focus karte hain.</p><p><b>हमारा उद्देश्य:</b> स्पष्ट communication, जिम्मेदार coordination और काम की जरूरत के अनुसार सेवा देना।</p>
+<ul class="ticks"><li><b>✓</b>Requirement-based work planning / जरूरत के अनुसार योजना</li><li><b>✓</b>Clear communication and coordination / स्पष्ट बातचीत</li><li><b>✓</b>Enquiries from across India / पूरे भारत से पूछताछ</li></ul><a class="btn blue" href="#contact">Discuss Your Requirement / बात करें</a></div></div></section>
+<section id="process"><div class="wrap"><div class="intro"><span class="kicker">How we work / काम करने का तरीका</span><h2>Clear steps. Better coordination.</h2><p>Har project ka scope alag hota hai. Isliye pehle requirement samajhna zaroori hai.</p></div>
+<div class="steps"><div class="step"><small>STEP 01</small><h3>Share your requirement</h3><p>काम का प्रकार, साइट की लोकेशन, अनुमानित मात्रा और समयसीमा बताएं।</p></div><div class="step"><small>STEP 02</small><h3>Discuss the scope</h3><p>Scope, site conditions, resources aur commercial details par discussion karein.</p></div><div class="step"><small>STEP 03</small><h3>Plan the next steps</h3><p>Details confirm hone ke baad suitable next steps aur coordination discuss kiya jayega.</p></div></div></div></section>
+<div class="cta"><div class="wrap"><div><h2>Have a project requirement?</h2><p>Apne project ki details bhejein — आइए बात शुरू करें।</p></div><a class="btn" href="#contact">Send an Enquiry / पूछताछ भेजें</a></div></div>
+<section class="contact" id="contact"><div class="wrap"><div class="intro"><span class="kicker">Contact / संपर्क</span><h2>Let's discuss your project</h2><p>Call, email ya WhatsApp ke through apni requirement share karein.</p></div>
+<div class="contact-grid"><div class="contact-box"><h3>SRISHTI ENTERPRISES</h3>
+<div class="row"><small>Phone / फोन</small><a href="tel:+917615020584">+91 76150 20584</a></div>
+<div class="row"><small>WhatsApp</small><a href="https://wa.me/917615020584" target="_blank" rel="noopener">Chat on WhatsApp / WhatsApp पर बात करें</a></div>
+<div class="row"><small>Email / ईमेल</small><a href="mailto:srishtienterprisesrbt@gmail.com">srishtienterprisesrbt@gmail.com</a></div>
+<div class="row"><small>Location / स्थान</small><b>Rawatbhata, Rajasthan, India</b></div><p class="note">Website publish karne se pehle contact details confirm kar lein.</p></div>
+<div class="form-box"><h3>Enquiry Form / पूछताछ फॉर्म</h3><form id="enquiryForm">
+<label for="name">Your Name / आपका नाम *</label><input id="name" required placeholder="Enter your name">
+<label for="company">Company Name / कंपनी का नाम</label><input id="company" placeholder="Company (optional)">
+<label for="service">Service Required / कौन-सी सेवा चाहिए? *</label><select id="service" required><option value="">Select a service</option><option>Civil & Construction Works</option><option>Industrial Painting</option><option>Sand Blasting & Surface Preparation</option><option>Mechanical Works</option><option>Manpower Supply</option><option>Other Industrial Contract</option></select>
+<label for="location">Site Location / साइट की लोकेशन</label><input id="location" placeholder="City, State">
+<label for="message">Project Details / काम की जानकारी *</label><textarea id="message" required placeholder="Briefly describe your requirement"></textarea>
+<button class="btn blue" type="submit">Send via WhatsApp / WhatsApp पर भेजें</button><p class="note">This form opens WhatsApp with your message. It does not save submissions on this website.</p>
+</form></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><b>SRISHTI ENTERPRISES</b><br>Civil · Mechanical · Industrial Contracting</div><div>© <span id="year"></span> SRISHTI ENTERPRISES. All rights reserved.</div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();
+const name=document.getElementById('name').value.trim(),company=document.getElementById('company').value.trim(),service=document.getElementById('service').value,location=document.getElementById('location').value.trim(),message=document.getElementById('message').value.trim();
+const body=['Hello SRISHTI ENTERPRISES, I have a project enquiry.','Name: '+name,company?'Company: '+company:'','Service: '+service,location?'Site Location: '+location:'','Project Details: '+message].filter(Boolean).join('\n');
+window.open('https://wa.me/917615020584?text='+encodeURIComponent(body),'_blank','noopener');});
+</script>
+</body></html>
